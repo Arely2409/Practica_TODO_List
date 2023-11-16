@@ -1,1 +1,10 @@
-<p>list works!</p>
+<form [formGroup]="fTask" (submit)="saveTask()" class="grid grid-cols-12 gap-4 -mt-7">
+   <mat-form-field appearance="fill" color="accent" class="col-span-10">
+        <mat-label>Agregar una tarea</mat-label>
+        <input matInput formControlName="name" placeholder="Recoger documentos">
+    </mat-form-field>
+    <button type="submit" mat-flat-button class="bg-blue-800 text-white col-span-2">
+        Crear
+        <mat-icon>add_circle</mat-icon>
+    </button>
+</form>
